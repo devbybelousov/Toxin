@@ -1,0 +1,25 @@
+@import "src/assets/scss/utils/vars";
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url($path-assets + '/fonts/Montserrat/Bold/Montserrat-Bold.eot');
+  src: url($path-assets + '/fonts/Montserrat/Bold/Montserrat-Bold.woff') format('woff'),
+       url($path-assets + '/fonts/Montserrat/Bold/Montserrat-Bold.ttf') format('truetype'),
+       url($path-assets + '/fonts/Montserrat/Bold/Montserrat-Bold.svg') format('svg');
+}
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url($path-assets + '/fonts/Montserrat/Regular/Montserrat-Regular.eot');
+  src: url($path-assets + '/fonts/Montserrat/Regular/Montserrat-Regular.woff') format('woff'),
+       url($path-assets + '/fonts/Montserrat/Regular/Montserrat-Regular.ttf') format('truetype'),
+       url($path-assets + '/fonts/Montserrat/Regular/Montserrat-Regular.svg') format('svg');
+}
+@font-face {
+  font-family: 'Quicksand-Bold';
+  src: url($path-assets + '/fonts/Quicksand/Bold/Quicksand-Bold.eot');
+  src: url($path-assets + '/fonts/Quicksand/Bold/Quicksand-Bold.woff') format('woff'),
+       url($path-assets + '/fonts/Quicksand/Bold/Quicksand-Bold.ttf') format('truetype'),
+       url($path-assets + '/fonts/Quicksand/Bold/Quicksand-Bold.svg') format('svg');
+}
+
+

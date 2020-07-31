@@ -1,0 +1,12 @@
+@import "../../assets/scss/utils/libs";
+@import "../../assets/scss/utils/vars";
+@import "../../assets/scss/utils/mixins";
+@import "../../assets/scss/utils/fonts";
+@import "../../assets/scss/utils/reset";
+.button{
+  text-transform: uppercase;
+  font-family: $thirdFont;
+  font-size: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+}

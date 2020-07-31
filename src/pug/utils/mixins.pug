@@ -1,0 +1,16 @@
+mixin item(title, descr)
+  .item
+    h2.item-title= title
+    p.item-descr= descr
+
+mixin button-one(title)
+  block button-one
+    button().button.button_type_one= title
+
+mixin button-two(title)
+  block button-two
+    button().button.button_type_two= title
+
+
+
+

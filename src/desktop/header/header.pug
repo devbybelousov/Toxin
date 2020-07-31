@@ -1,0 +1,33 @@
+block header
+  header
+    .header_container
+      .header_logo
+        a(href=""): img.logo_img(src="/assets/img/Logo.png")/
+      ul.header_nav
+        li.header_nav_item.header_nav_item_active: a(href="#about") О нас
+        li.header_nav_item.header_nav_item_dropdown
+          a(href="#services") Услуги
+            img.header_nav_arrow-up(src="/assets/img/expand_more.png")/
+          ul.dropdown
+            li.dropdown_item: a(href="#") Услуга 1
+            li.dropdown_item: a(href="#") Услуга 2
+            li.dropdown_item: a(href="#") Услуга 3
+        li.header_nav_item: a(href="#") Вакансии
+        li.header_nav_item: a(href="#news") Новости
+        li.header_nav_item
+          a(href="#") Соглашения
+            img.header_nav_arrow-up(src="/assets/img/expand_more.png")
+          ul.dropdown
+            li.dropdown_item: a(href="#") Соглашение 1
+            li.dropdown_item: a(href="#") Соглашение 2
+            li.dropdown_item: a(href="#") Соглашение 3
+        if !authorised
+          li.header_nav_item
+            +button-two("Войти")
+          li.header_nav_item
+            +button-one("зарегистрироваться")
+        else
+          li.header_nav_item
+            span.header_nav_line
+          li.header_nav_item.header_nav_item_user
+            a(href="#") Юлий Цезарь

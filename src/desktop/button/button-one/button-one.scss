@@ -1,0 +1,9 @@
+.button_type_one{
+  color: $default-color;
+  background: linear-gradient($purple-color, #8BA4F9);
+  padding: 12px 18px;
+}
+
+.button_type_one:hover{
+  background: linear-gradient(rgba(188, 156, 255, 0.5), rgba(139, 164, 249, 0.5));
+}

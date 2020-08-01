@@ -50,9 +50,14 @@ header{
   display: block;
   text-align: center;
   padding: 10px 0;
-  color: $mainFontColor;
+  color: $fontColor50;
   font-family: $mainFont;
   font-size: 14px;
+}
+
+.header_nav_item a:hover{
+  text-decoration: underline;
+  color: rgba(31, 32, 65, 0.75);;
 }
 
 .header_nav_item_active a{
@@ -81,7 +86,7 @@ span.header_nav_line:after{
 }
 
 .dropdown_item a{
-  color: $fontColor;
+  color: $fontColor100;
   font-size: 12px;
   font-family: $thirdFont;
   text-transform: uppercase;

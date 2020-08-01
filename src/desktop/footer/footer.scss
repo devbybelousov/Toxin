@@ -1,1 +1,85 @@
-// footer style
+footer{
+  background: $default-color;
+  width: 100%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  padding: 30px 0;
+}
+
+.footer_container{
+  max-width: $desktopWidth;
+  @media screen and (max-width: $desktopWidth) {
+    max-width: $smDesktopWidth;
+  }
+  @media screen and (max-width: $tableWidth) {
+    max-width: $phoneWidth;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    max-width: $smPhoneWidth;
+  }
+  display: flex;
+  margin: 0 auto;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.footer_description{
+  width: 280px;
+}
+
+img.footer_logo{
+
+}
+
+p.desc{
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+li.navigation_item{
+  padding: 10px 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+li.navigation_item a{
+  text-decoration: none;
+  color: $fontColor50;
+  font-size: 14px;
+}
+
+li.navigation_item p{
+  color: $fontColor50;
+  font-size: 14px;
+}
+
+li.navigation_item a:hover{
+  text-decoration: underline;
+  color: $fontColor75;
+}
+
+.footer_navigation_subscription{
+  width: 250px;
+}
+
+.navigation_item_main{
+  text-transform: uppercase;
+  font-family: $thirdFont;
+  font-weight: bold;
+  color: $fontColor100;
+  font-size: 12px;
+}
+
+.copyright-bar{
+  background: $default-color;
+  padding: 20px 0;
+  width: 100%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+p.copyright-bar_item{
+  font-size: 14px;
+}
+
+.copyright-bar_social-networks img{
+  padding: 0 10px;
+}

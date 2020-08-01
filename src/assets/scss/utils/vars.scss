@@ -4,8 +4,9 @@ $secondFont              : 'Quicksand-Bold', sans-serif;
 $thirdFont              : 'Montserrat-Bold', sans-serif;
 
 // Size
-$mainFontColor           : rgba(31, 32, 65, 0.5);
-$fontColor               : rgba(31, 32, 65, 1);
+$fontColor50             : rgba(31, 32, 65, 0.5);
+$fontColor100            : rgba(31, 32, 65, 1);
+$fontColor75             : rgba(31, 32, 65, 0.75);
 $mainFontSize            : 18px;
 $mainFontWeight          : 400;
 $mainLineHeight          : 1.4;
@@ -33,7 +34,7 @@ $neutral-placeholder     : #C0C4CC;
 
 // Border Color
 $border-base             : rgba(31, 32, 65, 0.5);
-$border-light            : #E4E7ED;
+$border-light            : rgba(31, 32, 65, 0.25);
 $border-lighter          : #EBEEF5;
 $border-lightex          : #F2F6FC;
 

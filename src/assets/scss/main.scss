@@ -7,7 +7,7 @@
 html {
   line-height: $mainLineHeight;
   font-size: $mainFontSize;
-  color: $mainFontColor;
+  color: $fontColor50;
   height: 100%;
   @media screen and (max-width: $desktopWidth) {
 		font-size: 16px;
@@ -71,4 +71,5 @@ body{
 @import "../../desktop/button/button-two/button-two";
 @import "../../desktop/button/button";
 @import "../../desktop/footer/footer";
+@import "../../desktop/text-field/default/text-field";
 

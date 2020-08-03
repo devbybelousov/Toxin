@@ -2,25 +2,36 @@ block header
   header
     .header_container
       .header_logo
-        a(href=""): img.logo_img(src="/assets/img/Logo.png")/
+        a(href=""): img.logo_img(src="/assets/img/Logo.png")
+      input(type="checkbox" id="checkbox1").checkbox1.visuallyHidden
+      label(for="checkbox1")
+        .header_button-menu
+          span.header_button-menu_item.header_button-menu_item_one
+          span.header_button-menu_item.header_button-menu_item_two
+          span.header_button-menu_item.header_button-menu_item_three
+          span.header_button-menu_item.header_button-menu_item_four
       ul.header_nav
         li.header_nav_item.header_nav_item_active: a(href="#about") О нас
-        li.header_nav_item.header_nav_item_dropdown
-          a(href="#services") Услуги
-            img.header_nav_arrow-up(src="/assets/img/expand_more.png")/
-          ul.dropdown
-            li.dropdown_item: a(href="#") Услуга 1
-            li.dropdown_item: a(href="#") Услуга 2
-            li.dropdown_item: a(href="#") Услуга 3
+        input(type="checkbox" id="header_checkbox_services").header_checkbox.header_checkbox_services.visuallyHidden
+        label(for="header_checkbox_services")
+          li.header_nav_item.header_nav_item_dropdown
+            p Услуги
+              img.header_nav_arrow-up(src="/assets/img/expand_more.png")/
+            ul.dropdown
+              li.dropdown_item: a(href="#") Услуга 1
+              li.dropdown_item: a(href="#") Услуга 2
+              li.dropdown_item: a(href="#") Услуга 3
         li.header_nav_item: a(href="#") Вакансии
         li.header_nav_item: a(href="#news") Новости
-        li.header_nav_item
-          a(href="#") Соглашения
-            img.header_nav_arrow-up(src="/assets/img/expand_more.png")
-          ul.dropdown
-            li.dropdown_item: a(href="#") Соглашение 1
-            li.dropdown_item: a(href="#") Соглашение 2
-            li.dropdown_item: a(href="#") Соглашение 3
+        input(type="checkbox" id="header_checkbox_agreements").header_checkbox.header_checkbox_agreements.visuallyHidden
+        label(for="header_checkbox_agreements")
+          li.header_nav_item
+            p Соглашения
+              img.header_nav_arrow-up(src="/assets/img/expand_more.png")
+            ul.dropdown
+              li.dropdown_item: a(href="#") Соглашение 1
+              li.dropdown_item: a(href="#") Соглашение 2
+              li.dropdown_item: a(href="#") Соглашение 3
         if !authorised
           li.header_nav_item
             +button-two("Войти")
@@ -28,6 +39,6 @@ block header
             +button-one("зарегистрироваться")
         else
           li.header_nav_item
-            span.header_nav_line
+            hr
           li.header_nav_item.header_nav_item_user
             a(href="#") Юлий Цезарь

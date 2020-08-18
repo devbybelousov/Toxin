@@ -1,0 +1,40 @@
+include ../../button/button
+
+mixin header__nav(options)
+    input(type="checkbox" id="nav__checkbox_button").nav_checkbox.nav__checkbox_button-menu.nav__checkbox_visually-hidden
+    label(for="nav__checkbox_button")
+        .button-menu
+            span.button-menu__item.button-menu__item_one
+            span.button-menu__item.button-menu__item_two
+            span.button-menu__item.button-menu__item_three
+            span.button-menu__item.button-menu__item_four
+    ul.nav
+        for menu_item in options.menu
+            if menu_item.active
+                li.nav__item.nav__item_active: a(href= menu_item.href)= menu_item.value
+            else if menu_item.dropdown
+                li.nav__item
+                    a(href= menu_item.href)= menu_item.value
+                        img(src="/assets/img/expand_more.png").nav__expand-more
+            else
+                li.nav__item: a(href= menu_item.href)= menu_item.value
+        if !options.authorised
+            li.nav__item
+                +button({
+                    theme: "light",
+                    size: "small",
+                    href: "#",
+                    value: "Войти",
+                    background: "there"
+                })
+            li.nav__item
+                +button({
+                    theme: "dark",
+                    size: "small",
+                    href: "#",
+                    value: "зарегистрироваться",
+                    background: "there"
+                })
+        else
+            li.nav__item: span
+            li.nav__item: a(href="#") Юлий Цезарь

@@ -1,0 +1,18 @@
+input.dropdown-date{
+  width: auto !important;
+  margin: 50px;
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-family: $mainFont;
+
+}
+
+input.dropdown-date:checked + input.dropdown-date::-webkit-calendar-picker-indicator{
+  transform: scale(1, -1);
+}
+
+::-webkit-calendar-picker-indicator {
+  background: url("/assets/img/expand_more.png") no-repeat 10px;
+  transition: transform 0.2s ease-in;
+  cursor: pointer;
+}

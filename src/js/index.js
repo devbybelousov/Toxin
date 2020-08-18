@@ -1,2 +1,4 @@
-// Main js file
-// see more: https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
+import '../components/elements/dropdown/date/dropdown-date'
+import '../components/elements/dropdown/default/dropdown'
+import '../components/elements/dropdown/date/datepicker'
+import '../components/elements/dropdown/date/jquery-ui.min'

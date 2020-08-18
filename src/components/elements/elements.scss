@@ -1,0 +1,29 @@
+body{
+  background-color: $default-color !important;
+}
+
+.block-one{
+  height: 140px;
+}
+
+.block-one__logo{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.elements{
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.elements__column{
+  width: 320px;
+}
+
+.elements__row{
+  margin: 20px 0;
+}

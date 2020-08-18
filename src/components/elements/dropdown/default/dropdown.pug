@@ -1,0 +1,39 @@
+include ../../button/button
+mixin dropdown()
+        .select Сколько гостей
+        .select__items
+            .select__item
+                .item__value Взрослые
+                .item__counter
+                    img(src="../assets/img/minus.png" data-item="1").item__minus
+                    .item__number(data-item="1") 0
+                    img(src="../assets/img/plus.png" data-item="1").item__plus
+            .select__item
+                .item__value Дети
+                .item__counter
+                    img(src="../assets/img/minus.png" data-item="2").item__minus
+                    .item__number(data-item="2") 0
+                    img(src="../assets/img/plus.png" data-item="2").item__plus
+            .select__item
+                .item__value Младенцы
+                .item__counter
+                    img(src="../assets/img/minus.png" data-item="3").item__minus
+                    .item__number(data-item="3") 0
+                    img(src="../assets/img/plus.png" data-item="3").item__plus
+            .select__item.select__item_buttons
+                +button({
+                    theme: "dark",
+                    size: "big",
+                    href: "#",
+                    value: "Очистить",
+                    background: "not",
+                    id: "clear"
+                })
+                +button({
+                    theme: "light",
+                    size: "big",
+                    href: "#",
+                    value: "Применить",
+                    background: "not",
+                    id: "apply"
+                })

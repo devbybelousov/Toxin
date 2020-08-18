@@ -1,0 +1,17 @@
+include ../../text-field/text-field
+mixin footer__nav(options)
+    ul(class=options.text_field).navigation
+        for menu_item in options.menu
+            if menu_item.title
+                li.navigation__item.navigation__item_main= menu_item.value
+            else if menu_item.description
+                li.navigation__item: p= menu_item.value
+            else
+                li.navigation__item: a(href= menu_item.href)= menu_item.value
+        if options.text_field
+            li.navigation__item
+                +text_field({
+                    type: "email",
+                    placeholder: "Email",
+                    subscription: true
+                })

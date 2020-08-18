@@ -1,0 +1,15 @@
+.button_type-three{
+  padding: 2px 0;
+}
+
+.button_type-three a{
+  text-transform: uppercase;
+  font-family: $thirdFont;
+  font-size: 12px;
+  text-decoration: none;
+  color: $purple-color;
+}
+
+.button_type-three a:hover{
+  opacity: 0.5;
+}

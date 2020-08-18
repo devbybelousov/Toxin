@@ -1,0 +1,16 @@
+.button_type-four{
+  padding: 2px 0;
+}
+
+.button_type-four a{
+  text-transform: uppercase;
+  font-family: $thirdFont;
+  font-size: 12px;
+  text-decoration: none;
+  color: $fontColor50;
+}
+
+.button_type-four a:hover{
+  opacity: 0.5;
+}
+

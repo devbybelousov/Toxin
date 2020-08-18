@@ -1,0 +1,40 @@
+ul.navigation{
+  @media screen and (max-width: $tableWidth) {
+    display: none;
+  }
+}
+
+li.navigation__item{
+  padding: 10px 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+li.navigation__item a{
+  text-decoration: none;
+  color: $fontColor50;
+  font-size: 14px;
+}
+
+li.navigation__item p{
+  color: $fontColor50;
+  font-size: 14px;
+}
+
+li.navigation__item a:hover{
+  text-decoration: underline;
+  color: $fontColor75;
+}
+
+.navigation_subscription{
+  width: 250px;
+}
+
+.navigation__item_main{
+  text-transform: uppercase;
+  font-family: $thirdFont;
+  font-weight: bold;
+  color: $fontColor100;
+  font-size: 12px;
+}

@@ -1,0 +1,38 @@
+include ../../components/elements/input/input
+.block-one
+    img(src="../assets/img/logo_block.png").block-one__logo
+.elements
+    .elements__column
+        .elements__row
+            +input({
+                label: "text field",
+                direction: "default",
+                type: 0
+            })
+        .elements__row
+            +input({
+                label: "text field",
+                direction: "hover / focus",
+                type: 1
+            })
+        .elements__row
+            +input({
+                label: "dropdown",
+                direction: "default",
+                type: 2
+            })
+    .elements__column
+        .elements__row
+            +input({
+                label: "checkbox buttons",
+                direction: "",
+                type: 7
+            })
+        .elements__row
+            +input({
+                label: "radio buttons",
+                direction: "",
+                type: 8
+            })
+    .elements__column
+        

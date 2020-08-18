@@ -42,34 +42,36 @@ ul, li {
   list-style-type: none;
 }
 
-.invisible-block-head{
-  background-color: #F4F4F6;
-  height: 150px;
-  width: 100%;
-}
-
-.invisible-block-head_logo{
-  position: relative;
-  top: 30px;
-  left: 30px;
-}
-
-.invisible-block{
-  background-color: #F4F4F6;
-  height: 50px;
-  width: 100%;
-}
-
 body{
-  background-color: #F4F4F6;
+  //background-color: #F4F4F6;
 }
 
+.label-field{
+  color: $fontColor100;
+  font-size: 12px !important;
+  font-family: $thirdFont;
+  text-transform: uppercase;
+  display: block;
+  margin: 50px;
+  margin-bottom: 0;
+}
 
 // Modules
-@import "../../desktop/header/header";
-@import "../../desktop/button/button-one/button-one";
-@import "../../desktop/button/button-two/button-two";
-@import "../../desktop/button/button";
-@import "../../desktop/footer/footer";
-@import "../../desktop/text-field/default/text-field";
+@import "../../components/header/header";
+@import "../../components/elements/button/button-four/button-four";
+@import "../../components/elements/button/button-three/button-three";
+@import "../../components/elements/button/button";
+@import "../../components/cards/calendar/calendar";
+@import "../../components/footer/footer";
+@import "../../components/elements/text-field/text-field";
+@import "../../components/elements/dropdown/date/dropdown-date";
+@import "../../components/elements/nav/header/nav";
+@import "../../components/elements/nav/footer/nav";
+@import "../../components/elements/elements";
+@import "../../components/elements/dropdown/default/dropdown";
+@import "../../components/elements/label/label";
+@import "../../components/elements/radio/radio";
+@import "../../components/elements/input/input";
+@import "../../components/elements/checkbox/checkbox";
+@import "../../components/header&footer/header&footer";
 

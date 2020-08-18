@@ -3,6 +3,7 @@ const fs = require('fs')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack =  require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
 
 // Main const
@@ -49,7 +50,7 @@ module.exports = {
     rules: [{
       test: /\.pug$/,
       oneOf: [
-        // this applies to <template lang="pug"> in Vue components
+        // this applies to <template lang="pug"> in Vue elements
         {
           resourceQuery: /^\?vue/,
           use: ['pug-plain-loader']
@@ -129,7 +130,21 @@ module.exports = {
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: '' },
+
     ]),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
+    }),
+    new HtmlWebpackPlugin({ // optional plugin: inject cdn
+      externals: [
+        {
+          module: 'jquery',
+          entry: 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'
+        }
+      ],
+    }),
 
     // Automatic creation any html pages (Don't forget to RERUN dev server)
     // see more: https://github.com/vedees/webpack-template/blob/master/README.md#create-another-html-files

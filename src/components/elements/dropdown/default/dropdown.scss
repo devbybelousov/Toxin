@@ -1,0 +1,110 @@
+.select{
+  position: relative;
+  display: flex;
+  padding: 10px;
+  color: $fontColor75;
+  cursor: pointer;
+  border: 1px solid $border-light;
+  border-radius: 4px;
+  font-size: 14px;
+  overflow: hidden;
+  transition: all .25s ease-in;
+}
+
+/* Arrow */
+.select::after {
+  content: '';
+  display: block;
+  color: $default-color;
+  background: url("/assets/img/expand_more.png") no-repeat center center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  pointer-events: none;
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after,
+.select.active::after{
+  background: url("/assets/img/expand_more_2.png") no-repeat center center;
+}
+
+.select:hover,
+.select.active{
+  border: 1px solid $border-base;
+}
+
+.select.active{
+  border-radius: 4px 4px 0 0;
+}
+
+.select__items{
+  position: relative;
+  color: $fontColor100;
+  font-family: $thirdFont;
+  border: 1px solid $border-base;
+  border-radius: 0 0 4px 4px;
+  font-size: 12px;
+  border-top: 0;
+  display: none;
+}
+
+.select__items.enabled{
+  display: block;
+}
+
+.select__item{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.select__item_buttons{
+  padding-top: 15px;
+}
+
+.item__counter{
+  display: flex;
+  justify-content: space-around;
+}
+
+.item__value{
+  padding: 7px 0;
+  text-transform: uppercase;
+}
+
+.item__number{
+  padding: 7px 0px;
+  width: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.item__plus{
+  cursor: pointer;
+}
+
+.item__minus{
+  opacity: 0.38;
+}
+
+.item__minus.active{
+  opacity: 1;
+  cursor: pointer;
+}
+
+#clear.-disabled-{
+  opacity: 0 !important;
+  transition: opacity .3s ease-in;
+}
+
+#clear.-disabled- a{
+  cursor: default !important;
+}
+
+#apply{
+  float: right;
+  display: inline;
+}

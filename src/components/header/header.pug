@@ -1,0 +1,16 @@
+
+include ../elements/nav/header/nav
+
+mixin header(authorised)
+  .header
+    .header__container
+      .header__logo
+        a(href=""): img(src="/assets/img/Logo.png")
+      +header__nav({
+        authorised: authorised,
+        menu:[ {value: "О нас", active:true, href:"#"},
+               {value: "Услуги", dropdown:true,  href:"#"},
+               {value: "Ваканасии",  href:"#"},
+               {value: "Новости",  href:"#"},
+               {value: "Соглашения",  dropdown:true, href:"#"}]
+      })

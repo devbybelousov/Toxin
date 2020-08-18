@@ -1,0 +1,19 @@
+.label{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.label__title{
+  text-transform: uppercase;
+  color: $fontColor100;
+  font-family: $thirdFont;
+  font-size: 12px;
+}
+
+.label__direction{
+  text-transform: uppercase;
+  color: $fontColor50;
+  font-family: $mainFont;
+  font-size: 12px;
+}

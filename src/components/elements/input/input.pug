@@ -1,0 +1,70 @@
+include ../../elements/label/label
+include ../../elements/text-field/text-field
+include ../../elements/dropdown/default/dropdown
+include ../../elements/checkbox/checkbox
+include ../../elements/radio/radio
+mixin input(options)
+    +label(options.label, options.direction)
+    case options.type
+        when 0
+            +text_field({
+                type: "email",
+                placeholder: "Email",
+                subscription: false,
+                action: "default"
+            })
+        when 1
+            +text_field({
+                type: "email",
+                placeholder: "Email",
+                subscription: false,
+                action: "hover",
+                value: "This is pretty awesome"
+            })
+        when 2
+            +dropdown()
+        when 3
+            +text_field({
+                type: "date",
+                placeholder: "ДД.ММ.ГГГГ",
+                subscription: false,
+                action: "default"
+            })
+        when 4
+            +dropdown-date()
+        when 5
+            +dropdown-date-filtered()
+        when 6
+            +text_field({
+                type: "email",
+                placeholder: "Email",
+                subscription: true,
+                action: "default"
+            })
+        when 7
+            +checkbox({
+                value: "Можно курить",
+                id: 1
+            })
+            +checkbox({
+                value: "Можно с питомцами",
+                active: "yes",
+                id: 2
+            })
+            +checkbox({
+                value: "Можно пригласить гостей (до 10 человек)",
+                active: "yes",
+                id: 3
+            })
+        when 8
+            .checkboxs
+                +radio({
+                    value: "Мужчина",
+                    id: "male",
+                    name: "sex"
+                })
+                +radio({
+                    value: "Женщина",
+                    id: "female",
+                    name: "sex"
+                })

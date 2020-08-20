@@ -3,6 +3,7 @@ include ../../elements/text-field/text-field
 include ../../elements/dropdown/default/dropdown
 include ../../elements/checkbox/checkbox
 include ../../elements/radio/radio
+include ../../elements/like/like
 mixin input(options)
     +label(options.label, options.direction)
     case options.type
@@ -44,27 +45,45 @@ mixin input(options)
         when 7
             +checkbox({
                 value: "Можно курить",
-                id: 1
+                id: 1,
+                toggle: false
             })
             +checkbox({
                 value: "Можно с питомцами",
                 active: "yes",
-                id: 2
+                id: 2,
+                toggle: false
             })
             +checkbox({
                 value: "Можно пригласить гостей (до 10 человек)",
                 active: "yes",
-                id: 3
+                id: 3,
+                toggle: false
             })
         when 8
             .checkboxs
                 +radio({
                     value: "Мужчина",
                     id: "male",
-                    name: "sex"
+                    name: "sex",
                 })
                 +radio({
                     value: "Женщина",
                     id: "female",
-                    name: "sex"
+                    name: "sex",
                 })
+        when 9
+            +checkbox({
+                value: "Получать спецпредложения",
+                toggle: true,
+                id: "spec1"
+            })
+            +checkbox({
+                value: "Получать спецпредложения",
+                toggle: true,
+                id: "spec2"
+            })
+        when 10
+            .checkboxs
+                +like-button(2, "1")
+                +like-button(11, "2")

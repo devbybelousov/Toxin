@@ -1,0 +1,77 @@
+.like__container{
+  margin-right: 10px;
+}
+
+.like{
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid $fontColor25;
+  position: relative;
+  cursor: pointer;
+  transition: border .25s ease-in;
+}
+
+.like.-active-{
+  border: 1px solid $purple-color;
+}
+
+.like.-active- .like__amount{
+  color: $purple-color;
+  font-size: 10px;
+  top: 2px;
+}
+
+.like__heart{
+  background: url("/assets/img/favorite_border.svg") no-repeat center;
+  background-size: cover;
+  width: 10px;
+  height: 10px;
+  top: 4px;
+  left: 5px;
+  position: absolute;
+  transition: background .5s ease-in;
+}
+
+.like__heart.-enabled-{
+  background: url("/assets/img/favorite.svg") no-repeat center;
+  animation: pulsing_two .5s ease-in;
+}
+
+.like__heart.-disabled-{
+  background: url("/assets/img/favorite_border.svg") no-repeat center;
+  animation: pulsing_one .5s ease-in;
+}
+
+@keyframes pulsing_one{
+  0%{
+    transform: scale(1.0, 1.0);
+  }
+  50%{
+    transform: scale(1.5, 1.5)
+  }
+  100% {
+    transform: scale(1.0, 1.0);
+  }
+}
+
+@keyframes pulsing_two{
+  0%{
+    transform: scale(1.0, 1.0);
+  }
+  50%{
+    transform: scale(1.5, 1.5)
+  }
+  100% {
+    transform: scale(1.0, 1.0);
+  }
+}
+
+.like__amount{
+  top: 2px;
+  font-family: $mainFont;
+  font-size: 10px;
+  color: $fontColor25;
+  position: absolute;
+  left: 20px;
+}

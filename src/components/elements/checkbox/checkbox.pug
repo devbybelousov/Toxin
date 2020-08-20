@@ -1,4 +1,4 @@
 mixin checkbox(options)
     .checkbox
-        input(type="checkbox" id=options.id value=options.active)
+        input(type="checkbox" id=options.id value=options.active class= options.toggle ? "-toggle-": "-default-")
         label(for=options.id)= options.value

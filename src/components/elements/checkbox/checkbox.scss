@@ -9,8 +9,8 @@ input[type="checkbox"]:not(:checked)
   margin-bottom: 10px;
 }
 
-input[type="checkbox"]:checked + label,
-input[type="checkbox"]:not(:checked) + label{
+input[type="checkbox"].-default-:checked + label,
+input[type="checkbox"].-default-:not(:checked) + label{
   display: inline-block;
   position: relative;
   padding-left: 28px;
@@ -19,8 +19,8 @@ input[type="checkbox"]:not(:checked) + label{
   width: 220px;
 }
 
-input[type="checkbox"]:checked + label:before,
-input[type="checkbox"]:not(:checked) + label:before {
+input[type="checkbox"].-default-:checked + label:before,
+input[type="checkbox"].-default-:not(:checked) + label:before {
   content: "";
   position: absolute;
   left: 0px;
@@ -33,12 +33,12 @@ input[type="checkbox"]:not(:checked) + label:before {
   transition: border .3s ease-in;
 }
 
-input[type="checkbox"]:not(:checked) + label:hover::before{
+input[type="checkbox"].-default-:not(:checked) + label:hover::before{
   border-color: $fontColor75;
 }
 
-input[type="checkbox"]:checked + label:after,
-input[type="checkbox"]:not(:checked) + label:after {
+input[type="checkbox"].-default-:checked + label:after,
+input[type="checkbox"].-default-:not(:checked) + label:after {
   content: "";
   position: absolute;
   transition: all .3s ease-in;
@@ -52,15 +52,71 @@ input[type="checkbox"]:not(:checked) + label:after {
 
 }
 
-input[type="checkbox"]:not(:checked) + label:after{
+input[type="checkbox"].-default-:not(:checked) + label:after{
   opacity: 0;
 }
 
-input[type="checkbox"]:checked + label:before{
+input[type="checkbox"].-default-:checked + label:before{
   border-color: $purple-color;
 }
 
-input[type="checkbox"]:checked + label:after{
+input[type="checkbox"].-default-:checked + label:after{
   opacity: 1;
   transform: rotate(-45deg);
+}
+
+input[type="checkbox"].-toggle-:checked + label,
+input[type="checkbox"].-toggle-:not(:checked) + label{
+  display: inline-block;
+  position: relative;
+  padding-left: 56px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+input[type="checkbox"].-toggle-:checked + label:before,
+input[type="checkbox"].-toggle-:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid $fontColor25;
+  background-color: #ffffff;
+  transition: border .5s ease-in;
+}
+
+input[type="checkbox"].-toggle-:checked + label:after,
+input[type="checkbox"].-toggle-:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  transition: all 0.5s ease;
+  left: 4px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $fontColor25;
+  transform: translateX(0);
+}
+
+
+input[type="checkbox"].-toggle-:checked + label:before{
+  border-color: $purple-color;
+}
+
+input[type="checkbox"].-toggle-:checked + label:after{
+  background: linear-gradient(#BC9CFF, #8BA4F9);
+  transform: translateX(20px);
+}
+
+input[type="checkbox"].-toggle-:not(:checked)  + label:before{
+  border-color: $fontColor25;
+}
+
+input[type="checkbox"].-toggle-:not(:checked)  + label:after{
+  background: $fontColor25;
+  transform: translateX(0);
 }
